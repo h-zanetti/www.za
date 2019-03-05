@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Crie Sua Joia</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row justify-content-md-center border-bottom">
+            <diV class="col col-lg-4">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../images/logo.png" height="90px">
+                </a>
+            </nav>
+            </div>
+            <div class="col col-lg-auto pad-md">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Z</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown notActive" data-toggle='dropdown' href="#">Joias</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Feminino</a>
+                                <a class="dropdown-item" href="#">Unissex</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-item" href="#">Summer Sale</a>
+                            </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown notActive" data-toggle='dropdown' href="#">Especiais</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Joias Personalizadas</a>
+                                <a class="dropdown-item" href="#">Aulas</a>
+                            </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown notActive" data-toggle='dropdown' href="#">Coleções</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Metamorfose</a>
+                                <a class="dropdown-item" href="#">Why Not?</a>
+                                <a class="dropdown-item" href="#">Generations</a>
+                                <a class="dropdown-item" href="#">Bastet</a>
+                                <a class="dropdown-item" href="#">Humanos</a>
+                                <a class="dropdown-item" href="#">Jardim Secreto</a>
+                                <a class="dropdown-item" href="#">Fragmentos</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link notActive" href="#">Quem Sou</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link notActive" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pad-lg">
+            <div class="col-7">
+                <img class="position-sticky" id="piece" src="../images/blank.jpg" style="max-width: 550px; max-height: 420px;">
+                <p class="font-seize-md p-green" id="budget">Orçamento: $0.00</p>
+            </div>
+            <div class="col">
+                <div id="first">
+                    <p class="font-seize-md">Escolha o tipo da sua peça</p>
+                    <div class="btn-group" role="group">
+                        <button onclick="chooseType('ring')" type="button" class="btn btn-light border">Anel</button>
+                        <button onclick="chooseType('earring')" type="button" class="btn btn-light border">Brinco</button>
+                        <button onclick="chooseType('necklace')" type="button" class="btn btn-light border">Colar</button>
+                        <button onclick="chooseType('bracelet')" type="button" class="btn btn-light border">Pulseira</button>
+                    </div>
+                </div>
+
+                <div id="second" class="d-none">
+                    <p class="font-seize-md pad-md">Escolha um formato</p>
+                    <div class="btn-group d-none" id="ringFormat" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('solitário')">Solitário</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('aliança')">Aliança</button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Chevalier</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseFormat('chevalie redondo')" href="#">Redondo</a>
+                                <a class="dropdown-item" onclick="chooseFormat('chevalier quadrado')" href="#">Quadrado</a>
+                                <a class="dropdown-item" onclick="chooseFormat('chevalier retangular')" href="#">Retangular</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group d-none" id="earringFormat" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 1')">Solitário</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 2')">Argola</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 3')">Earcuff</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 4')">Formato 4</button>    
+                    </div>
+                    <div class="btn-group d-none" id="braceletFormat" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 5')">Formato 5</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 6')">Formato 6</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 7')">Formato 7</button>    
+                    </div>
+                    <div class="btn-group d-none" id="necklaceFormat" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 8')">Formato 8</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 9')">Formato 9</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 10')">Formato 10</button>  
+                    </div>
+                    <div class="btn-group d-none" id="braceletFormat" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 11')">Formato 11</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 12')">Formato 12</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseFormat('Formato 13')">Formato 13</button>  
+                    </div>
+                </div>
+
+                <div class="d-none" id="third">
+                    <p class="font-seize-md pad-md">Escolha o metal e sua coloração</p>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseMetal('silver')">Prata</button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Ouro</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseMetal('gold')" href="#">Amarelo</a>
+                                <a class="dropdown-item" onclick="chooseMetal('whiteGold')" href="#">Branco</a>
+                                <a class="dropdown-item" onclick="chooseMetal('roseGold')" href="#">Rose</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Banho</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseMetal('silver');choosePlate('gold')" href="#">Ouro Amarelo</a>
+                                <a class="dropdown-item" onclick="chooseMetal('silver');choosePlate('whiteGold')" href="#">Ouro Branco</a>
+                                <a class="dropdown-item" onclick="chooseMetal('silver');choosePlate('roseGold')" href="#">Ouro Rose</a>
+                                <a class="dropdown-item" onclick="chooseMetal('silver');choosePlate('blackRhodium')" href="#">Ródio Negro</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none" id="forth">
+                    <p class="font-seize-md pad-md">Escolha a(s) pedra(s) que deseja</p>
+                    <div class="btn-group" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Diamante</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseRock('diamante10')" href="#">10 pontos</a>
+                                <a class="dropdown-item" onclick="chooseRock('diamante20')" href="#">20 pontos</a>
+                                <a class="dropdown-item" onclick="chooseRock('diamante30')" href="#">30 pontos</a>
+                                <a class="dropdown-item" onclick="chooseRock('diamante40')" href="#">40 pontos</a>
+                                <a class="dropdown-item" onclick="chooseRock('diamante50')" href="#">50 ou mais</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light border" onclick="chooseRock('apatita')">Apatita</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseRock('opala')">Opala</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseRock('rubelita')">Rubelita</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-light border" onclick="chooseRock('rubi')">Rubi</button>
+                        <button type="button" class="btn btn-light border" onclick="chooseRock('tanzanita')">Tanzanita</button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Topazio</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseRock('topazioImperial')" href="#">Imperial</a>
+                                <a class="dropdown-item" onclick="chooseRock('topazioSwiss')" href="#">Swiss</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Turmalina</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseRock('turmalinaMelancia')" href="#">Melancia</a>
+                                <a class="dropdown-item" onclick="chooseRock('turmalinaParaiba')" href="#">Paraiba</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none" id="fith">
+                    <p class="font-seize-md pad-md">Escolha os formatos e quilate de sua pedra</p>
+                    <div class="btn-group" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Gota</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseForm('gota1')" href="#">1.0 a 2.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('gota2')" href="#">2.0 a 3.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('gota3')" href="#">3.0 a 4.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('gota4')" href="#">4.0 a 5.0</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Oval</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseForm('oval1')" href="#">1.0 a 2.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('oval2')" href="#">2.0 a 3.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('oval3')" href="#">3.0 a 4.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('oval4')" href="#">4.0 a 5.0</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Quadrado</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseForm('quadrado1')" href="#">1.0 a 2.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('quadrado2')" href="#">2.0 a 3.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('quadrado3')" href="#">3.0 a 4.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('quadrado4')" href="#">4.0 a 5.0</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group" role='group'>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Retangular</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseForm('retangular1')" href="#">1.0 a 2.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('retangular2')" href="#">2.0 a 3.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('retangular3')" href="#">3.0 a 4.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('retangular4')" href="#">4.0 a 5.0</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light border dropdown-toggle" data-toggle="dropdown">Coração</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" onclick="chooseForm('heart 1')" href="#">1.0 a 2.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('heart 2')" href="#">2.0 a 3.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('heart 3')" href="#">3.0 a 4.0</a>
+                                <a class="dropdown-item" onclick="chooseForm('heart 4')" href="#">4.0 a 5.0</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="d-none p-blue pad-sm" id="alertHeart">PS: Esse formato está disponível apenas para a opção de pedra Rubi.</p>
+                </div>
+                <div class="d-none" id="sixth">
+                    <p class="font-seize-md pad-md">Finalizar pedido</p>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary" onclick="finalize()">Finalizar</button>
+                        <button type="button" class="btn btn-dark" onclick="save()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+
+</body>
+
+</html>

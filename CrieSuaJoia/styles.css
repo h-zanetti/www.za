@@ -1,0 +1,30 @@
+.pad-sm {
+    padding-top: 1em;
+}
+.pad-sm-left {
+    padding-left: 1em;
+}
+
+.pad-md {
+    padding-top: 2em;
+}
+
+.pad-lg {
+    padding-top: 4em;
+}
+
+.font-seize-md {
+    font-size: 1.25em;
+}
+
+.p-green {
+    color: rgb(15, 187, 15);
+}
+
+.p-blue {
+    color: rgb(77, 77, 255);
+}
+
+.border-bottom {
+    background-color: white;
+}
